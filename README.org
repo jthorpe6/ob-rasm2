@@ -15,25 +15,25 @@ Cloe the repo, then add the following to your =init.el=
 
 #+begin_example
 
-#+begin_src rasm2 :arch arm :bits 32
+,#+begin_src rasm2 :arch arm :bits 32
           add r3, pc, #1
           bx r3
           mov r0, #2
           svc #1
-#+end_src
+,#+end_src
 
-#+RESULTS:
+,#+RESULTS:
 : \x01\x30\x8f\xe2\x13\xff\x2f\xe1\x02\x00\xa0\xe3\x01\x00\x00\xef
 
 #+end_example
 
 #+begin_example
 
-#+begin_src rasm2 :arch arm :bits 32 :disasm
+,#+begin_src rasm2 :arch arm :bits 32 :disasm
 01308fe2
 #+end_src
 
-#+RESULTS:
+,#+RESULTS:
 : add r3, pc, 1
 
 #+end_example
