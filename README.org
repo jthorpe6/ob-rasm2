@@ -1,0 +1,12 @@
+#+TITLE: ob-rasm2
+
+Adds [[https://r2wiki.readthedocs.io/en/latest/tools/rasm2/][rasm2]] to Org-Babel. Idea found [[https://vishnudevtj.github.io/notes/wrting-shellcode-in-emacs][here]].
+
+* Installation
+Cloe the repo, then add the following to your =init.el=
+
+#+begin_src emacs-lisp
+    (use-package ob-rasm2
+      :load-path "/path/to/ob-rasm2/"
+      :config (add-to-list 'org-src-lang-modes '("rasm2" . asm))) ;; important for C-' to work
+#+end_src
