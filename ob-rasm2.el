@@ -30,9 +30,9 @@ PARAMS is the configuration.
 This function is called by 'org-babel-execute-src-block'."
   (let* ((arch (cdr (assq :arch params)))
 	 (bits (cdr (assq :bits params))))
-    (if (assq :disam params)
+    (if  (assq :disasm params)
 	(shell-command-to-string
-	 (concat "rasm2 -a " arch " -b " (number-to-string bits) "-d \"" body "\""))
+	 (concat "rasm2 -a  " arch " -b " (number-to-string bits) " -d \"" body "\"" ))
       (with-temp-buffer
 	(insert (shell-command-to-string
 		 (concat "rasm2 -C -a " arch " -b " (number-to-string bits) " \"" body "\"" )))
