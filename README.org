@@ -31,7 +31,7 @@ Cloe the repo, then add the following to your =init.el=
 
 ,#+begin_src rasm2 :arch arm :bits 32 :disasm
 01308fe2
-#+end_src
+,#+end_src
 
 ,#+RESULTS:
 : add r3, pc, 1
