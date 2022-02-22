@@ -10,3 +10,30 @@ Cloe the repo, then add the following to your =init.el=
       :load-path "/path/to/ob-rasm2/"
       :config (add-to-list 'org-src-lang-modes '("rasm2" . asm))) ;; important for C-' to work
 #+end_src
+
+* Example
+
+#+begin_example
+
+#+begin_src rasm2 :arch arm :bits 32
+          add r3, pc, #1
+          bx r3
+          mov r0, #2
+          svc #1
+#+end_src
+
+#+RESULTS:
+: \x01\x30\x8f\xe2\x13\xff\x2f\xe1\x02\x00\xa0\xe3\x01\x00\x00\xef
+
+#+end_example
+
+#+begin_example
+
+#+begin_src rasm2 :arch arm :bits 32 :disasm
+01308fe2
+#+end_src
+
+#+RESULTS:
+: add r3, pc, 1
+
+#+end_example
